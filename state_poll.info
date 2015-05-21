@@ -1,4 +1,4 @@
-name = Ice Cream Poll
+name = State Poll
 description = Asks the user to input their favorite ice cream and home state.
 package = Epicodus Examples
 core = 7.x
