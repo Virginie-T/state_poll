@@ -106,7 +106,7 @@ function element_validate_state($element) {
     'AP'=>'ARMED FORCES PACIFIC',
 );
 
-    if ($state != $valid_states) {
+    if (!in_array($state, $valid_states)) {
         form_error($element, t('Re-enter your home state please'));
     }
 
