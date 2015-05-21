@@ -123,5 +123,12 @@ function state_poll_form_submit($form, &$form_state) {
 
 function state_poll_success() {
     $answer = $_SESSION['state_output'];
-    return 'Thank you! We have you down for ' . $answer[0] . ' in the state of ' . $answer[1];
+
+    if (strlen($answer[1]) === 2) {
+        strtoupper($answer[1]);
+    } else {
+        ucfirst($answer[1]);
+    }
+
+    return 'Thank you! We have you down for ' . $answer[0] . ' in the state of ' . $answer[1] . '.';
 }
