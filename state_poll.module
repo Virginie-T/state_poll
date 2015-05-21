@@ -121,7 +121,7 @@ function state_form_submit($form, &$form_state) {
     $form_state['redirect'] = 'success';
 }
 
-function state_success() {
+function state_poll_success() {
     $answer = $_SESSION['state_output'];
     return 'Thank you! We have you down for ' . $answer[0] . ' in the state of ' . $answer[1];
 }
