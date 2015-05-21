@@ -39,7 +39,7 @@ function state_poll_form() {
 }
 
 function element_validate_state($element) {
-    $state = $element['values'];
+    $state = $element['#value'];
 
     $valid_states = array(
     'AL'=>'ALABAMA',
@@ -123,5 +123,5 @@ function state_form_submit($form, &$form_state) {
 
 function state_success() {
     $answer = $_SESSION['state_output'];
-    return 'Thank you! We have you down for' . $answer[0] . 'cookie dough in the state of ' . $answer[1];
+    return 'Thank you! We have you down for ' . $answer[0] . ' in the state of ' . $answer[1];
 }
