@@ -125,10 +125,10 @@ function state_poll_success() {
     $answer = $_SESSION['state_output'];
 
     if (strlen($answer[1]) === 2) {
-        strtoupper($answer[1]);
+        $caps = strtoupper($answer[1]);
     } else {
-        ucfirst($answer[1]);
+        $caps = ucfirst($answer[1]);
     }
 
-    return 'Thank you! We have you down for ' . $answer[0] . ' in the state of ' . $answer[1] . '.';
+    return 'Thank you! We have you down for ' . $answer[0] . ' in the state of ' . $caps . '.';
 }
