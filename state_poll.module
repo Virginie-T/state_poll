@@ -112,7 +112,7 @@ function element_validate_state($element) {
 
 }
 
-function state_form_submit($form, &$form_state) {
+function state_poll_form_submit($form, &$form_state) {
     $flavor = $form_state['values']['flavor'];
     $state = $form_state['values']['state'];
     $info = [$flavor, $state];
