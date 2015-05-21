@@ -39,7 +39,7 @@ function state_poll_form() {
 }
 
 function element_validate_state($element) {
-    $state = $element['#value'];
+    $state = $element['values'];
 
     $valid_states = array(
     'AL'=>'ALABAMA',
