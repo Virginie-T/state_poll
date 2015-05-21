@@ -8,8 +8,8 @@ function state_poll_menu() {
         'access callback' => TRUE,
         'type' => MENU_NORMAL_ITEM,
     );
-    $items['success'] = array(
-        'title' => 'Success',
+    $items['result'] = array(
+        'title' => 'Poll Response',
         'page callback' => 'state_poll_success',
         'access callback' => TRUE,
         'type' => MENU_CALLBACK,
@@ -118,7 +118,7 @@ function state_form_submit($form, &$form_state) {
     $info = [$flavor, $state];
     $_SESSION['state_output'] = $info;
 
-    $form_state['redirect'] = 'success';
+    $form_state['redirect'] = 'result';
 }
 
 function state_poll_success() {
